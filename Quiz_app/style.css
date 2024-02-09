@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+
+
+}
+
+body {
+    background-color: rgb(61, 32, 178);
+}
+
+#quiz {
+    display: block;
+    margin-top: 50px;
+    margin-left: 50px;
+    padding: 50px;
+    height: auto;
+    width: 400px;
+    text-align: center;
+    background-color: white;
+    border: 2px solid black;
+}
+
+span {
+    border: 2px;
+    border-radius: 5px;
+    color: red;
+    border-color: black;
+}
+
+#form {
+    margin-top: 30px;
+    width: 400px;
+}
+
+#answer {
+
+    display: block;
+    /* height: 100px; */
+
+}
+
+.btn {
+    display: flex;
+    /* margin-left: 20px; */
+    margin: 5px;
+    background: white;
+    color: #222;
+    font-weight: 500;
+    width: 100%;
+    border: 1px solid #222;
+    padding: 10px;
+    text-align: left;
+    border-radius: 5px;
+    cursor: pointer;
+
+
+}
+
+h2 {
+    text-align: left;
+    margin-left: 10px;
+    text-decoration: underline;
+    margin-bottom: 10PX;
+}
+
+.btn:hover {
+    background: #222;
+    color: #fff;
+
+}
+
+#Nxt-btn {
+    display: none;
+    width: 25%;
+    justify-content: center;
+    padding: 5px;
+    background-color: rgb(40, 144, 160);
+    margin: 20px 5px 10px 150px;
+}
+
+#Nxt-btn:hover {
+    color: #fff;
+    background: #222;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+
+}
