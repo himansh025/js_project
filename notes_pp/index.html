@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes App</title>
+    <style>
+        * {
+            top: 0px;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        body {
+            background: rgb(159, 81, 81);
+        }
+
+        .container {
+            background: rgb(31, 31, 118);
+            width: 500px;
+            height: 500px;
+            display: block;
+            margin: 10% 25%;
+            border: black solid 2px;
+            border-radius: 10px;
+        }
+
+        .heading {
+            display: flex;
+            margin-top: 20px;
+            margin-left: 10px;
+            font-size: 20px;
+
+
+        }
+
+        .photo {
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        .written {
+            margin-left: 10px;
+            display: inline-block;
+            margin-top: 15px;
+
+        }
+
+        img {
+
+            /* mix-blend-mode: color-burn; */
+            color: pink;
+        }
+
+        button {
+            background: palevioletred;
+            border: 1px solid red;
+            border-radius: 5px;
+            width: 90px;
+            height: 30px;
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+.img{
+    margin-left: 10px;
+}
+        .section2 {
+            display: flex;
+        }
+        .notes{
+            height: 60px;
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="heading">
+            <div class="photo"><img src="img/vector-notes-icon.jpg" height="50px" alt=""></div>
+            <div class="written">
+                <p>Notes App</p>
+            </div>
+        </div>
+        <div class="section2">
+            <div class="img"><img src="img/notes.png" height="50px" alt=""></div>
+            <div class="button"><button> Create Notes</button></div>
+        </div>
+
+        <div class="notes">
+            <!-- <p></p> -->
+        </div>
+    </div>
+<script>
+let button= document.querySelector(".button");
+let notes= document.querySelector("n.otes")
+</script>
+</body>
+
+</html>
