@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: sans-serif;
+            box-sizing: border-box;
+        }
+        body {
+            background: #191919;
+        }
+        .gallery {
+            display: flex;
+            width: 700px;
+            overflow-x: scroll;
+        }
+        .gallery div {
+            width: 100%;
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-gap: 20px;
+            padding: 10px;
+            flex: none;
+        }
+        .gallery div img {
+            width: 100%;
+            filter: grayscale(100%);
+            transition: transform 0.5s;
+        }
+        .gallery::-webkit-scrollbar {
+            display: none;
+        }
+        .gallery-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10%;
+        }
+        #nxtbtn,#bckbtn {
+            width: 40px;
+            cursor: pointer;
+            margin: 20px;
+        }
+        .gallery div img:hover {
+            filter: grayscale(0);
+            cursor: pointer;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery-wrap">
+        <img src="images/back.png" id="bckbtn" alt="">
+        <div class="gallery">
+            <div>
+                <span> <img src="images/image-1.png" alt=""></span>
+                <span><img src="images/image-2.png" alt=""></span>
+                <span><img src="images/image-3.png" alt=""></span>
+            </div>
+            <div>
+                <span><img src="images/image-4.png" alt=""></span>
+                <span><img src="images/image-5.png" alt=""></span>
+                <span><img src="images/image-6.png" alt=""></span>
+            </div>
+        </div>
+        <img src="images/next.png" id="nxtbtn" alt="">
+    </div>
+    <script>
+        let scrollcontainer = document.querySelector(".gallery");
+        let backbtn = document.getElementById("bckbtn");
+        let nextbtn = document.getElementById("nxtbtn");
+
+        scrollcontainer.addEventListener("click", (evt) => {
+            evt.preventDefault();
+        scrollcontainer.style.scrollBehavior ="smooth";
+        
+
+            scrollcontainer.scrollLeft += evt.deltaY;
+        });
+
+
+
+      backbtn.addEventListener("click",()=>{
+        scrollcontainer.style.scrollBehavior ="smooth";
+//         scrollContainer.scrollTo({
+//   top: myElement.offsetTop,
+//   behavior: "smooth"
+});
+      
+        scrollcontainer.scrollLeft-=700;
+      });
+      nextbtn.addEventListener("click",()=>{
+        scrollcontainer.style.scrollBehavior = "smooth";
+//         scrollContainer.scrollTo({
+//   top: myElement.offsetTop,
+//   behavior: "smooth"
+// });
+        scrollcontainer.scrollLeft+=700;
+      });
+
+    </script>
+</body>
+</html>

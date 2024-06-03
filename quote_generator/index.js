@@ -1,5 +1,4 @@
-    
-        let quote= "https://api.quotable.io/random";
+let quote= "https://api.quotable.io/random";
         let author =document.getElementById("author");
         let add=document.querySelector("blockquote");
         async function getquote(url){
@@ -12,6 +11,7 @@ author.innerHTML=data.author;
         }
         getquote(quote);
 
+        
 function postontweeter(){
     window.open("https://twitter.com/intent/tweet?text=" + add.innerHTML+ "       -----by "+ author.innerHTML,"tweet Window","width=600,height=300")
 

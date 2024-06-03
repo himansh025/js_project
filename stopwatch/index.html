@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    body{
+        background: rgb(110, 101, 101);
+    }
+    .stopwatch{
+        color: white;
+        margin: 200px 200px;
+        border: 2px solid black;
+    width: 50vh;
+    height:50vh;
+    /* background: linear-gradient(2 2 2 1, 2 3 0 0 ) ; */
+    /* background-image:url(img/images/background.png) ; */
+    /* background-color: azure; */
+    /* background-position: center; */
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
+        align-items:center;
+    }
+  
+  
+    .stopwatch h1{ 
+        color: black;
+        text-align: center;
+        max-width: 400px;
+        width: 100%;
+        /* background-color: aqua; */
+        margin: 40px;
+        justify-content: center;
+    } 
+  
+</style>
+</head>
+
+<body>
+    <div class="stopwatch">
+      
+<h1>stopwatch</h1>
+<div class="displaytime">00:00:00</div>
+<div id="button">
+<img src="img/images/reset.png" alt="">
+    <img src="img/images/start.png" onclick="watchstart()" alt="">
+   <img src="img/images/stop.png" alt="">
+</div>
+
+    </div>
+
+    <script>
+
+let [second,minute,hour]= [0,0,0];
+let displaytime = document.querySelector(".displaytime");
+let timer =null;
+ function stopwatch(){
+    second++;
+    if(second==60){
+        second=0;
+        minute++;
+        if(minute==60)
+        {
+            minute=0;
+            hour++;
+        }  
+    }
+    displaytime.innerHTML= hour +":"+minute +":"+second;
+ }
+
+ function watchstart(){
+if( timer!= null)
+{
+    clearInterval(timer);
+}
+
+timer=setInterval( 
+    stopwatch,1000);
+}
+    </script>
+</body>
+</html>
